@@ -137,10 +137,8 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  if data1.key?(:age) then puts "OK" else puts "NG"
-  end
-  if data2.key?(:age) then puts "OK" else puts "NG"
-  end
+  puts data1.key?(:age) ? "OK" : "NG"
+  puts data2.key?(:age) ? "OK" : "NG"
 end
 
 def q16
@@ -153,8 +151,8 @@ def q16
 
   # 以下に回答を記載
   users.each do |user|
-    name = user.dig(:name)
-    age = user.dig(:age)
+    name = user[:name]
+    age = user[:age]
     puts "私の名前は#{name}です。年齢は#{age}歳です。"
   end
 end
