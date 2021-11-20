@@ -159,7 +159,21 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  attr_accessor :name, :age, :gender
 
+  def initialize(name:, age:, gender:)
+    @name = name
+    @age = age
+    @gender = gender
+  end
+
+  def info
+    puts <<~TEXT
+    名前：#{@name}
+    年齢：#{@age}
+    性別：#{@gender}
+    TEXT
+  end
 end
 
 def q17
@@ -174,6 +188,17 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  attr_accessor :name, :age
+
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
+
+  def introduce
+    @age >= 32 ? "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+    : "はいさいまいど〜，#{@name}です！！！"
+  end
 
 end
 
@@ -188,8 +213,9 @@ end
 
 class Item
   # 以下を修正して下さい
+  attr_accessor :name
 
-  def initialize(name)
+  def initialize(name:)
     @name = name
   end
 end
@@ -202,11 +228,29 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_accessor :name, :age
+
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
 
 end
 
 class Zoo
   # 以下に回答を記載
+  attr_accessor :name, :age
+
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
+
+  def introduce
+    @age >= 32 ? "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+    : "はいさいまいど〜，#{@name}です！！！"
+  end
+
 
 end
 
